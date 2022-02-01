@@ -1,4 +1,4 @@
-package com.ISISCapitalist;
+package com.example.ISISCapitalist;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
