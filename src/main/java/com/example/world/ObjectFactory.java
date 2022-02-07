@@ -6,7 +6,7 @@
 //
 
 
-package world;
+package com.example.world;
 
 import javax.xml.bind.annotation.XmlRegistry;
 

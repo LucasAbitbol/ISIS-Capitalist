@@ -1,5 +1,7 @@
 package com.example.ISISCapitalist;
 
+import com.example.world.World;
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
