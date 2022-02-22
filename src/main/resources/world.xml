@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<world>
+  <name>myworld</name>
+  <logo>myworld.png</logo>
+  <money>10000000</money>
+  <score>10000000</score>
+  <totalangels>1000000000</totalangels>
+  <activeangels>0</activeangels>
+  <angelbonus>0.02</angelbonus>
+  <lastupdate>12345</lastupdate>
+  
+  <products>
+      
+    <product>
+      <id>1</id>
+      <name>produit1</name>
+      <logo>produit1.png</logo>
+      <cout>1</cout>
+      <croissance>1.04</croissance>
+      <revenu>1.5</revenu>
+      <vitesse>1000</vitesse>
+      <quantite>0</quantite>
+      <timeleft>1000</timeleft>
+      <managerUnlocked>false</managerUnlocked>
+      
+      <palliers>
+          
+        <pallier>
+          <name>product1pallier1</name>
+          <logo>product1pallier1.png</logo>
+          <seuil>50</seuil>
+          <idcible>1</idcible>
+          <ratio>1.5</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        
+        <pallier>
+          <name>product1pallier2</name>
+          <logo>product1pallier2.png</logo>
+          <seuil>150</seuil>
+          <idcible>1</idcible>
+          <ratio>1.75</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        
+        <pallier>
+          <name>product1pallier3</name>
+          <logo>product1pallier3.png</logo>
+          <seuil>300</seuil>
+          <idcible>1</idcible>
+          <ratio>2</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        
+      </palliers>
+    
+    </product>
+   
+    <product>
+      <id>2</id>
+      <name>produit2</name>
+      <logo>produit2.png</logo>
+      <cout>2</cout>
+      <croissance>1.06</croissance>
+      <revenu>1.75</revenu>
+      <vitesse>2000</vitesse>
+      <quantite>0</quantite>
+      <timeleft>2000</timeleft>
+      <managerUnlocked>false</managerUnlocked>
+      
+      <palliers>
+          
+        <pallier>
+          <name>product2pallier1</name>
+          <logo>product2pallier1.png</logo>
+          <seuil>100</seuil>
+          <idcible>2</idcible>
+          <ratio>1.75</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        
+        <pallier>
+          <name>product2pallier2</name>
+          <logo>product2pallier2.png</logo>
+          <seuil>300</seuil>
+          <idcible>2</idcible>
+          <ratio>1.95</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        
+        <pallier>
+          <name>product2pallier3</name>
+          <logo>product2pallier3.png</logo>
+          <seuil>700</seuil>
+          <idcible>2</idcible>
+          <ratio>2.25</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        
+      </palliers>
+    </product>
+       
+  </products>
+  
+  <allunlocks>
+      
+    <pallier>
+      <name>Tout vitesse x2</name>
+      <logo>toutvitessex2.png</logo>
+      <seuil>25</seuil>
+      <idcible>0</idcible>
+      <ratio>2</ratio>
+      <typeratio>vitesse</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    
+  </allunlocks>
+  
+  <upgrades>
+      
+    <pallier>
+      <name>Tout x2</name>
+      <logo>toutx2.png</logo>
+      <seuil>10 000</seuil>
+      <idcible>0</idcible>
+      <ratio>2</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    
+    <pallier>
+      <name>Tout x2</name>
+      <logo>toutx2.png</logo>
+      <seuil>10000</seuil>
+      <idcible>0</idcible>
+      <ratio>2</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    
+    <pallier>
+      <name>Produit 1 vitesse x2</name>
+      <logo>p1vitessex2.png</logo>
+      <seuil>5000</seuil>
+      <idcible>1</idcible>
+      <ratio>2</ratio>
+      <typeratio>vitesse</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    
+    <pallier>
+      <name>Produit 2 vitesse x2</name>
+      <logo>p2vitessex2.png</logo>
+      <seuil>7500</seuil>
+      <idcible>2</idcible>
+      <ratio>2</ratio>
+      <typeratio>vitesse</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    
+     <pallier>
+      <name>Tout x3</name>
+      <logo>toutx3.png</logo>
+      <seuil>100000</seuil>
+      <idcible>0</idcible>
+      <ratio>3</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    
+    <pallier>
+      <name>Produit 1 vitesse x3</name>
+      <logo>p1vitessex3.png</logo>
+      <seuil>50000</seuil>
+      <idcible>1</idcible>
+      <ratio>3</ratio>
+      <typeratio>vitesse</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    
+    <pallier>
+      <name>Produit 2 vitesse 3</name>
+      <logo>p2vitessex3.png</logo>
+      <seuil>75000</seuil>
+      <idcible>2</idcible>
+      <ratio>3</ratio>
+      <typeratio>vitesse</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    
+     <pallier>
+      <name>Tout x4</name>
+      <logo>toutx4.png</logo>
+      <seuil>500000</seuil>
+      <idcible>0</idcible>
+      <ratio>4</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    
+  </upgrades>
+  
+  <angelupgrades>
+      
+    <pallier>
+      <name>Investisseur +2%</name>
+      <logo>investorplus2.png</logo>
+      <seuil>100000</seuil>
+      <idcible>-1</idcible>
+      <ratio>1.02</ratio>
+      <typeratio>ange</typeratio>
+      <unlocked>true</unlocked>
+    </pallier>
+    
+    <pallier>
+      <name>Investisseur +3%</name>
+      <logo>investorplus3.png</logo>
+      <seuil>300000</seuil>
+      <idcible>-1</idcible>
+      <ratio>1.03</ratio>
+      <typeratio>ange</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    
+    <pallier>
+      <name>Investisseur +4%</name>
+      <logo>investorplus4.png</logo>
+      <seuil>700000</seuil>
+      <idcible>-1</idcible>
+      <ratio>1.04</ratio>
+      <typeratio>ange</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    
+  </angelupgrades>
+  
+  <managers>
+      
+    <pallier>
+      <name>Wassim Aityoucef</name>
+      <logo>wassimaityoucef.png</logo>
+      <seuil>100</seuil>
+      <idcible>1</idcible>
+      <ratio>1.5</ratio>
+      <typeratio>vitesse</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    
+    <pallier>
+      <name>Lucas Abitbol</name>
+      <logo>lucasabitbol.png</logo>
+      <seuil>100</seuil>
+      <idcible>2</idcible>
+      <ratio>1.7</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    
+  </managers>
+</world>

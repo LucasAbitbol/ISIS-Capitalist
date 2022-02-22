@@ -1,6 +1,6 @@
 package com.example.ISISCapitalist;
 
-import com.example.world.World;
+import com.example.world.*;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
@@ -11,18 +11,28 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class Services {
+
+    private World myworld = new World;
+
     World readWorldFromXml() {
+        try {
         InputStream input = getClass().getClassLoader().getResourceAsStream("world.xml");
         JAXBContext cont = JAXBContext.newInstance(World.class);
         Unmarshaller u = cont.createUnmarshaller();
-        World world = (World) u.unmarshal(new File(input));
+        myworld = (World) u.unmarshal(input);
+        }
+
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return myworld;
     }
 
     void saveWordlToXml(World world) {
-        OutputStream output = new FileOutputStream(newWorld);
+        OutputStream output = new FileOutputStream("newWorld.xml");
         JAXBContext cont = JAXBContext.newInstance(World.class);
         Marshaller m = cont.createMarshaller();
-        m.marshal(films, new File("newWorld.xml"));
+        m.marshal(world, new File("newWorld.xml"));
     }
 
     World getWorld() {
