@@ -2,10 +2,7 @@ package com.example.ISISCapitalist;
 
 import com.example.world.World;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("adventureisis/generic")
@@ -19,8 +16,9 @@ public class WebService {
 
     @GetMapping(value = "world", produces = {"application/xml", "application/json"})
 
-    public ResponseEntity<World> getWorld() {
-        World world = services.getWorld();
+    public ResponseEntity<World> getWorld(@RequestHeader(value = "X-User",
+            required = false) String username) {
+        World world = services.getWorld(username);
         return ResponseEntity.ok(world);
     }
 }
