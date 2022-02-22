@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <world>
-  <name>myworld</name>
-  <logo>myworld.png</logo>
+  <name>WassftLucas FC</name>
+  <logo>club.png</logo>
   <money>10000000</money>
   <score>10000000</score>
   <totalangels>1000000000</totalangels>
@@ -14,8 +14,8 @@
       
     <product>
       <id>1</id>
-      <name>produit1</name>
-      <logo>produit1.png</logo>
+      <name>Joueur ligue 1</name>
+      <logo>ligue1.png</logo>
       <cout>1</cout>
       <croissance>1.04</croissance>
       <revenu>1.5</revenu>
@@ -27,8 +27,8 @@
       <palliers>
           
         <pallier>
-          <name>product1pallier1</name>
-          <logo>product1pallier1.png</logo>
+          <name>50 joueurs de L1 achetés</name>
+          <logo>50jl1.png</logo>
           <seuil>50</seuil>
           <idcible>1</idcible>
           <ratio>1.5</ratio>
@@ -37,8 +37,8 @@
         </pallier>
         
         <pallier>
-          <name>product1pallier2</name>
-          <logo>product1pallier2.png</logo>
+          <name>150 Joueurs de L1 achetés</name>
+          <logo>150jl1.png</logo>
           <seuil>150</seuil>
           <idcible>1</idcible>
           <ratio>1.75</ratio>
@@ -47,8 +47,8 @@
         </pallier>
         
         <pallier>
-          <name>product1pallier3</name>
-          <logo>product1pallier3.png</logo>
+          <name>300 Joueurs de L1 achetés</name>
+          <logo>300jl1.png</logo>
           <seuil>300</seuil>
           <idcible>1</idcible>
           <ratio>2</ratio>
@@ -62,8 +62,8 @@
    
     <product>
       <id>2</id>
-      <name>produit2</name>
-      <logo>produit2.png</logo>
+      <name>Joueur Liga</name>
+      <logo>joueurliga.png</logo>
       <cout>2</cout>
       <croissance>1.06</croissance>
       <revenu>1.75</revenu>
@@ -75,8 +75,8 @@
       <palliers>
           
         <pallier>
-          <name>product2pallier1</name>
-          <logo>product2pallier1.png</logo>
+          <name>100 Joueurs Liga achetés</name>
+          <logo>100jliga.png</logo>
           <seuil>100</seuil>
           <idcible>2</idcible>
           <ratio>1.75</ratio>
@@ -85,8 +85,8 @@
         </pallier>
         
         <pallier>
-          <name>product2pallier2</name>
-          <logo>product2pallier2.png</logo>
+          <name>300 Joueurs Liga achetés</name>
+          <logo>300jliga.png</logo>
           <seuil>300</seuil>
           <idcible>2</idcible>
           <ratio>1.95</ratio>
@@ -95,8 +95,8 @@
         </pallier>
         
         <pallier>
-          <name>product2pallier3</name>
-          <logo>product2pallier3.png</logo>
+          <name>700 Joueurs Liga achetés</name>
+          <logo>700jliga.png</logo>
           <seuil>700</seuil>
           <idcible>2</idcible>
           <ratio>2.25</ratio>
@@ -146,7 +146,7 @@
     </pallier>
     
     <pallier>
-      <name>Produit 1 vitesse x2</name>
+      <name>Joueurs Ligue 1 vitesse x2</name>
       <logo>p1vitessex2.png</logo>
       <seuil>5000</seuil>
       <idcible>1</idcible>
@@ -156,7 +156,7 @@
     </pallier>
     
     <pallier>
-      <name>Produit 2 vitesse x2</name>
+      <name>Joueurs Liga vitesse x2</name>
       <logo>p2vitessex2.png</logo>
       <seuil>7500</seuil>
       <idcible>2</idcible>
@@ -176,7 +176,7 @@
     </pallier>
     
     <pallier>
-      <name>Produit 1 vitesse x3</name>
+      <name>Joueur Ligue 1 vitesse x3</name>
       <logo>p1vitessex3.png</logo>
       <seuil>50000</seuil>
       <idcible>1</idcible>
@@ -186,7 +186,7 @@
     </pallier>
     
     <pallier>
-      <name>Produit 2 vitesse 3</name>
+      <name>Joueurs Liga vitesse 3</name>
       <logo>p2vitessex3.png</logo>
       <seuil>75000</seuil>
       <idcible>2</idcible>
