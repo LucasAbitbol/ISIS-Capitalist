@@ -12,30 +12,32 @@ import java.io.OutputStream;
 
 public class Services {
 
-    private World myworld = new World;
+    private World myworld = new World();
 
     World readWorldFromXml() {
         try {
-        InputStream input = getClass().getClassLoader().getResourceAsStream("world.xml");
-        JAXBContext cont = JAXBContext.newInstance(World.class);
-        Unmarshaller u = cont.createUnmarshaller();
-        myworld = (World) u.unmarshal(input);
-        }
-
-        catch (Exception e) {
+            InputStream input = getClass().getClassLoader().getResourceAsStream("world.xml");
+            JAXBContext cont = JAXBContext.newInstance(World.class);
+            Unmarshaller u = cont.createUnmarshaller();
+            myworld = (World) u.unmarshal(input);
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return myworld;
     }
 
     void saveWordlToXml(World world) {
-        OutputStream output = new FileOutputStream("newWorld.xml");
-        JAXBContext cont = JAXBContext.newInstance(World.class);
-        Marshaller m = cont.createMarshaller();
-        m.marshal(world, new File("newWorld.xml"));
+        try {
+            OutputStream output = new FileOutputStream("newWorld.xml");
+            JAXBContext cont = JAXBContext.newInstance(World.class);
+            Marshaller m = cont.createMarshaller();
+            m.marshal(world, output);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     World getWorld() {
-        readWorldFromXml();
+        return readWorldFromXml();
     }
 }
