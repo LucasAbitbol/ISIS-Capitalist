@@ -1,5 +1,6 @@
 package com.example.ISISCapitalist;
 
+import com.example.world.World;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

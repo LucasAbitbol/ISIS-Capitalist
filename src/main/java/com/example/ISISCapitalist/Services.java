@@ -9,29 +9,37 @@ import java.io.*;
 
 public class Services {
 
-    private World myworld = new World();
+    private World world = new World();
+    private String path = "src/main/resources";
 
-    World readWorldFromXml(String pseudo) {
-        InputStream input;
-        try {
-            input = new FileInputStream(pseudo+"-world.xml");
-        } catch (Exception e) {
-            e.printStackTrace();
-            input = getClass().getClassLoader().getResourceAsStream("world.xml");
+    World readWorldFromXml(String pseudo){
+        JAXBContext jaxbContext;
+        try{
+            try {
+                jaxbContext = JAXBContext.newInstance(World.class);
+                Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+                File f = new File(path+"/" + pseudo +"-world.xml");
+                world = (World) jaxbUnmarshaller.unmarshal(f);
+                return world;
+            } catch (Exception ex) {
+                jaxbContext = JAXBContext.newInstance(World.class);
+                Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+                // File f = new File(path+"/world.xml");
+                InputStream input = getClass().getClassLoader().getResourceAsStream("world.xml");
+                world = (World) jaxbUnmarshaller.unmarshal(input);
+                return world;
+            }
+        }catch (Exception ex){
+            System.out.println("Erreur lecture du fichier:"+ex.getMessage());
+            ex.printStackTrace();
         }
-        try {
-        JAXBContext cont = JAXBContext.newInstance(World.class);
-        Unmarshaller u = cont.createUnmarshaller();
-        myworld = (World) u.unmarshal(input);}
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-        return myworld;
+
+        return world;
     }
 
-    void saveWordlToXml(World world, String pseudo) {
+    void saveWorldToXml(World world, String pseudo) {
         try {
-            OutputStream output = new FileOutputStream(pseudo+"-world.xml");
+            OutputStream output = new FileOutputStream(path + "/" + pseudo+"-world.xml");
             JAXBContext cont = JAXBContext.newInstance(World.class);
             Marshaller m = cont.createMarshaller();
             m.marshal(world, output);
