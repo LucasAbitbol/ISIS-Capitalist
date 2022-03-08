@@ -6,6 +6,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.*;
+import java.util.List;
 
 public class Services {
 
@@ -49,7 +50,9 @@ public class Services {
     }
 
     World getWorld(String username) {
-        return readWorldFromXml(username);
+        World world = readWorldFromXml(username);
+        saveWorldToXml(world, username);
+        return world;
     }
 
     public ProductType findProductById(World world, int id) {
@@ -85,17 +88,27 @@ public class Services {
         // calculer la variation de quantité. Si elle est positive c'est
         // que le joueur a acheté une certaine quantité de ce produit
         // sinon c’est qu’il s’agit d’un lancement de production.
-        int qtchange = newproduct.getQuantite() - product.getQuantite();
-        if (qtchange > 0) {
+        int qteChange = newproduct.getQuantite() - product.getQuantite();
+        if (qteChange > 0) {
         // soustraire de l'argent du joueur le cout de la quantité achetée et mettre à jour la quantité de product
-            world.setMoney(world.getMoney()-(getCostOfProduct(product, qtchange)));
-            product.setCout(product.getCout()*Math.pow(product.getCroissance(),qtchange));
-            product.setQuantite(product.getQuantite());
+            world.setMoney(world.getMoney()-(getCostOfProduct(product, qteChange)));
+            product.setCout(product.getCout()*Math.pow(product.getCroissance(),qteChange));
+            product.setQuantite(newproduct.getQuantite());
         }
         else {
-        // initialiser product.timeleft à product.vitesse // pour lancer la production
+        // initialiser product.timeleft à product.vitesse pour lancer la production
             product.setTimeleft(product.getVitesse());
+            world.setMoney(world.getMoney() + (product.getRevenu() * product.getQuantite()));
         }
+
+        List<PallierType> unlocks = (List<PallierType>) product.getPalliers().getPallier();
+        for (PallierType u : unlocks) {
+            // si l'unlock n'est pas encore déloqué et que la quantité est supérieure au seuil
+            if (u.isUnlocked() == false && product.getQuantite() >= u.getSeuil()) {
+                addUpgrade(u, product);
+            }
+        }
+
         // sauvegarder les changements du monde
         saveWorldToXml(world, username);
         return true;
@@ -123,7 +136,59 @@ public class Services {
         // soustraire de l'argent du joueur le cout du manager
         // sauvegarder les changements au monde
         product.setManagerUnlocked(true);
+        world.setMoney(world.getMoney() - manager.getSeuil());
         saveWorldToXml(world, username);
         return true;
+    }
+
+    void updateWorld(String username) {
+        World world = getWorld(username);
+        long diff = System.currentTimeMillis() - world.getLastupdate();
+        int angeBonus = world.getAngelbonus();
+        List<ProductType> produits = (List<ProductType>) world.getProducts();
+        for (ProductType p : produits) {
+            // Le produit n'a pas de manager
+            if (!p.isManagerUnlocked()) {
+                // Le produit a été créé
+                if (p.getTimeleft() != 0 && p.getTimeleft() < diff) {
+                    double newScore = world.getScore() + p.getRevenu() * (1 + world.getActiveangels() * angeBonus / 100);
+                    world.setScore(newScore);
+                    double newMoney = world.getMoney() + p.getRevenu() * (1 + world.getActiveangels() * angeBonus / 100);
+                    world.setMoney(newMoney);
+                } // Le produit n'a pas été créé
+                else {
+                    long newTimeLeft = p.getTimeleft() - diff;
+                    p.setTimeleft(newTimeLeft);
+                }
+            } else {
+                long vitesse = p.getVitesse();
+                long nbProd = (int) diff / vitesse;
+                // On met à jour le score et l'argent du monde en fonction du nombre de produit créé
+                double newScore = world.getScore() + (p.getRevenu() * nbProd * (1 + world.getActiveangels() * angeBonus / 100));
+                world.setScore(newScore);
+                double newMoney = world.getMoney() + (p.getRevenu() * nbProd * (1 + world.getActiveangels() * angeBonus / 100));
+                world.setMoney(newMoney);
+
+                //On calcule le temps restant
+                long timeRestant = vitesse - diff % vitesse;
+                p.setTimeleft(timeRestant);
+            }
+        }
+        world.setLastupdate(System.currentTimeMillis());
+    }
+
+    // permet d'ajouter un upgrade au produit
+    public void addUpgrade(PallierType pallier, ProductType p) {
+        pallier.setUnlocked(true);
+        if (pallier.getTyperatio() == TyperatioType.VITESSE) {
+            double vitesse = p.getVitesse();
+            vitesse = (int) (vitesse * pallier.getRatio());
+            p.setVitesse((int) vitesse);
+        }
+        if (pallier.getTyperatio() == TyperatioType.GAIN) {
+            double revenu = p.getRevenu();
+            revenu = revenu * pallier.getRatio();
+            p.setRevenu(revenu);
+        }
     }
 }
