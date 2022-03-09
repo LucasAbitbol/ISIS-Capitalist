@@ -3,6 +3,7 @@ package com.example.ISISCapitalist;
 import com.example.world.*;
 
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.*;
@@ -51,6 +52,7 @@ public class Services {
 
     World getWorld(String username) {
         World world = readWorldFromXml(username);
+        updateWorld(username);
         saveWorldToXml(world, username);
         return world;
     }
@@ -105,7 +107,7 @@ public class Services {
         for (PallierType u : unlocks) {
             // si l'unlock n'est pas encore déloqué et que la quantité est supérieure au seuil
             if (u.isUnlocked() == false && product.getQuantite() >= u.getSeuil()) {
-                addUpgrade(u, product);
+                addUnlock(u, product);
             }
         }
 
@@ -178,17 +180,57 @@ public class Services {
     }
 
     // permet d'ajouter un upgrade au produit
-    public void addUpgrade(PallierType pallier, ProductType p) {
+    public void addUnlock(PallierType pallier, ProductType product) {
         pallier.setUnlocked(true);
         if (pallier.getTyperatio() == TyperatioType.VITESSE) {
-            double vitesse = p.getVitesse();
+            double vitesse = product.getVitesse();
             vitesse = (int) (vitesse * pallier.getRatio());
-            p.setVitesse((int) vitesse);
+            product.setVitesse((int) vitesse);
         }
         if (pallier.getTyperatio() == TyperatioType.GAIN) {
-            double revenu = p.getRevenu();
+            double revenu = product.getRevenu();
             revenu = revenu * pallier.getRatio();
-            p.setRevenu(revenu);
+            product.setRevenu(revenu);
         }
     }
+
+    // permet de trouver un upgrade
+    public PallierType findUpgrade(World world, String name) {
+        for (PallierType p : world.getUpgrades().getPallier()) {
+            if (name.equals(p.getName())) {
+                return p;
+            }
+        }
+        return null;
+    }
+
+    public Boolean addUpgrade(String username, PallierType newUpgrade) {
+        World world = getWorld(username);
+        // trouver dans ce monde l'upgrade
+        PallierType upgrade = findUpgrade(world, newUpgrade.getName());
+        if (upgrade == null) {
+            return false;
+        }
+        // débloquer cet upgrade
+        upgrade.setUnlocked(true);
+        // trouver le produit correspondant a l'upgrade
+        ProductType product = findProductById(world, upgrade.getIdcible());
+        if (product == null) {
+            return false;
+        }
+        // soustraire de l'argent du joueur le cout du cash upgrade
+        double money = world.getMoney();
+        double seuil = upgrade.getSeuil();
+
+        double newMoney = money - seuil;
+        world.setMoney(newMoney);
+
+        // modifier le produit en fonction de l'upgrade (mêmes fonctions que pour un unlock)
+        addUnlock(upgrade, product);
+
+        // sauvegarder les changements au monde
+        saveWorldToXml(world, username);
+        return true;
+    }
+
 }

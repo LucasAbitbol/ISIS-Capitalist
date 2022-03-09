@@ -32,4 +32,10 @@ public class WebService {
         services.updateManager(username, manager);
         return ResponseEntity.ok(services.getWorld(username));
     }
+
+    @PutMapping(value = "/upgrade", consumes = "application/json")
+    ResponseEntity<World> newupgrade(String username, PallierType upgrade) {
+        services.addUpgrade(username, upgrade);
+        return ResponseEntity.ok(services.getWorld(username));
+    }
 }
