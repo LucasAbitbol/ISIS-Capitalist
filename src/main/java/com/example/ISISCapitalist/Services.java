@@ -248,7 +248,7 @@ public class Services {
         return null;
     }
 
-    public Boolean addAngelUpgrade(String username, PallierType angel) {
+    public Boolean addAngelUpgrade(String username, PallierType angel){
         World world = getWorld(username);
         PallierType ange = findAngel(world, angel.getName());
         if (ange == null) {
