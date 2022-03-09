@@ -290,7 +290,6 @@ public class Services {
         world.setTotalangels(angesTotaux);
         world.setScore(score);
         saveWorldToXml(world, username);
-
     }
 
 }

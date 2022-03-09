@@ -59,12 +59,6 @@ public class WebService {
     }
 
     @PUT
-    @Path("allunlock")
-    public void putAllUnlock(@Context HttpServletRequest request, PallierType allUnlock) throws JAXBException {
-        String username = request.getHeader("X-user");
-        services.updateAllUnlock(username, allUnlock);
-    }
-    @PUT
     @Path("angel")
     public void putAngel(@Context HttpServletRequest request, PallierType angel) throws JAXBException {
         String username = request.getHeader("X-user");
