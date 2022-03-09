@@ -13,6 +13,7 @@ public class Services {
 
     private World world = new World();
     private String path = "src/main/resources";
+    InputStream input = getClass().getClassLoader().getResourceAsStream("world.xml");
 
     World readWorldFromXml(String pseudo){
         JAXBContext jaxbContext;
@@ -27,7 +28,6 @@ public class Services {
                 jaxbContext = JAXBContext.newInstance(World.class);
                 Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
                 // File f = new File(path+"/world.xml");
-                InputStream input = getClass().getClassLoader().getResourceAsStream("world.xml");
                 world = (World) jaxbUnmarshaller.unmarshal(input);
                 return world;
             }
@@ -231,6 +231,66 @@ public class Services {
         // sauvegarder les changements au monde
         saveWorldToXml(world, username);
         return true;
+    }
+
+    public double nombreAnges(World world) {
+        double angesActuels = world.getTotalangels();
+        double angesTotaux = Math.round(150 * Math.sqrt((world.getScore()) / Math.pow(10, 15))) - angesActuels;
+        return angesTotaux;
+    }
+
+    public PallierType findAngel(World world, String name) {
+        for (PallierType ange : world.getAngelupgrades().getPallier()) {
+            if (name.equals(ange.getName())) {
+                return ange;
+            }
+        }
+        return null;
+    }
+
+    public Boolean addAngelUpgrade(String username, PallierType angel) {
+        World world = getWorld(username);
+        PallierType ange = findAngel(world, angel.getName());
+        if (ange == null) {
+            return false;
+        }
+        // on débloque cet ange
+        ange.setUnlocked(true);
+        int angels = ange.getSeuil();
+        double totalAngels = world.getTotalangels();
+        double newtotalangel = totalAngels - angels;
+        if(ange.getTyperatio() == TyperatioType.ANGE) {
+            int angeBonus = world.getAngelbonus();
+            angeBonus += angeBonus + ange.getRatio();
+            world.setAngelbonus(angeBonus);
+        }
+        else{
+            addUpgrade(username, ange);
+        }
+        world.setActiveangels(newtotalangel);
+        saveWorldToXml(world, username);
+        return true;
+    }
+
+    public void deleteWorld(String username) throws JAXBException{
+        // on recalcule les anges actifs, totaux, le score
+        World world = readWorldFromXml(username);
+        double angesActifs = world.getActiveangels();
+        double angesTotaux = world.getTotalangels();
+        double anges = nombreAnges(world);
+        angesActifs = angesActifs + anges;
+        angesTotaux = angesTotaux + anges;
+        double score = world.getScore();
+
+        //on recrée une instance du monde ou l'on applique les résultats
+        JAXBContext cont = JAXBContext.newInstance(World.class);
+        Unmarshaller u = cont.createUnmarshaller();
+        world = (World) u.unmarshal(input);
+        world.setActiveangels(angesActifs);
+        world.setTotalangels(angesTotaux);
+        world.setScore(score);
+        saveWorldToXml(world, username);
+
     }
 
 }
