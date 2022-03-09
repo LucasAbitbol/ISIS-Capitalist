@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <world>
-  <name>WassftLucas FC</name>
+  <name>WassxLucas FC</name>
   <logo>club.png</logo>
   <money>10000000</money>
   <score>10000000</score>
@@ -14,21 +14,21 @@
       
     <product>
       <id>1</id>
-      <name>Joueur ligue 1</name>
-      <logo>ligue1.png</logo>
+      <name>Joueur Amateur</name>
+      <logo>Amateur.png</logo>
       <cout>1</cout>
       <croissance>1.04</croissance>
       <revenu>1.5</revenu>
-      <vitesse>1000</vitesse>
+      <vitesse>500</vitesse>
       <quantite>0</quantite>
-      <timeleft>1000</timeleft>
+      <timeleft>500</timeleft>
       <managerUnlocked>false</managerUnlocked>
       
       <palliers>
           
         <pallier>
-          <name>50 joueurs de L1 achetés</name>
-          <logo>50jl1.png</logo>
+          <name>50 joueurs amateurs achetés</name>
+          <logo>50jamateur.png</logo>
           <seuil>50</seuil>
           <idcible>1</idcible>
           <ratio>1.5</ratio>
@@ -37,8 +37,8 @@
         </pallier>
         
         <pallier>
-          <name>150 Joueurs de L1 achetés</name>
-          <logo>150jl1.png</logo>
+          <name>150 Joueurs amateurs achetés</name>
+          <logo>150jamateur.png</logo>
           <seuil>150</seuil>
           <idcible>1</idcible>
           <ratio>1.75</ratio>
@@ -47,8 +47,8 @@
         </pallier>
         
         <pallier>
-          <name>300 Joueurs de L1 achetés</name>
-          <logo>300jl1.png</logo>
+          <name>300 Joueurs amateurs achetés</name>
+          <logo>300jamateur.png</logo>
           <seuil>300</seuil>
           <idcible>1</idcible>
           <ratio>2</ratio>
@@ -62,21 +62,21 @@
    
     <product>
       <id>2</id>
-      <name>Joueur Liga</name>
-      <logo>joueurliga.png</logo>
-      <cout>2</cout>
-      <croissance>1.06</croissance>
+      <name>Joueur Professionnel</name>
+      <logo>joueurpro.png</logo>
+      <cout>60</cout>
+      <croissance>1.15</croissance>
       <revenu>1.75</revenu>
-      <vitesse>2000</vitesse>
+      <vitesse>3000</vitesse>
       <quantite>0</quantite>
-      <timeleft>2000</timeleft>
+      <timeleft>3000</timeleft>
       <managerUnlocked>false</managerUnlocked>
       
       <palliers>
           
         <pallier>
-          <name>100 Joueurs Liga achetés</name>
-          <logo>100jliga.png</logo>
+          <name>100 Joueurs Pro achetés</name>
+          <logo>100jpro.png</logo>
           <seuil>100</seuil>
           <idcible>2</idcible>
           <ratio>1.75</ratio>
@@ -85,8 +85,8 @@
         </pallier>
         
         <pallier>
-          <name>300 Joueurs Liga achetés</name>
-          <logo>300jliga.png</logo>
+          <name>300 Joueurs Pro achetés</name>
+          <logo>300jpro.png</logo>
           <seuil>300</seuil>
           <idcible>2</idcible>
           <ratio>1.95</ratio>
@@ -95,8 +95,8 @@
         </pallier>
         
         <pallier>
-          <name>700 Joueurs Liga achetés</name>
-          <logo>700jliga.png</logo>
+          <name>700 Joueurs Pro achetés</name>
+          <logo>700jpro.png</logo>
           <seuil>700</seuil>
           <idcible>2</idcible>
           <ratio>2.25</ratio>
@@ -106,6 +106,193 @@
         
       </palliers>
     </product>
+
+    <product>
+      <id>3</id>
+      <name>Joueur Europa League</name>
+      <logo>joueuruel.png</logo>
+      <cout>720</cout>
+      <croissance>1.14</croissance>
+      <revenu>1.75</revenu>
+      <vitesse>6000</vitesse>
+      <quantite>0</quantite>
+      <timeleft>6000</timeleft>
+      <managerUnlocked>false</managerUnlocked>
+      
+      <palliers>
+          
+        <pallier>
+          <name>100 Joueurs Europa achetés</name>
+          <logo>100juel.png</logo>
+          <seuil>100</seuil>
+          <idcible>3</idcible>
+          <ratio>1.75</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        
+        <pallier>
+          <name>300 Joueurs Europa achetés</name>
+          <logo>300juel.png</logo>
+          <seuil>300</seuil>
+          <idcible>3</idcible>
+          <ratio>1.95</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        
+        <pallier>
+          <name>700 Joueurs Europa achetés</name>
+          <logo>700juel.png</logo>
+          <seuil>700</seuil>
+          <idcible>3</idcible>
+          <ratio>2.25</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+
+        </product>
+
+    <product>
+      <id>4</id>
+      <name>Joueur Champions League</name>
+      <logo>joueurucl.png</logo>
+      <cout>8640</cout>
+      <croissance>1.13</croissance>
+      <revenu>1.75</revenu>
+      <vitesse>12000</vitesse>
+      <quantite>0</quantite>
+      <timeleft>12000</timeleft>
+      <managerUnlocked>false</managerUnlocked>
+      
+      <palliers>
+          
+        <pallier>
+          <name>100 Joueurs Champions achetés</name>
+          <logo>100jucl.png</logo>
+          <seuil>100</seuil>
+          <idcible>4</idcible>
+          <ratio>1.75</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        
+        <pallier>
+          <name>300 Joueurs Champions achetés</name>
+          <logo>300jucl.png</logo>
+          <seuil>300</seuil>
+          <idcible>4</idcible>
+          <ratio>1.95</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        
+        <pallier>
+          <name>700 Joueurs Champions achetés</name>
+          <logo>700jucl.png</logo>
+          <seuil>700</seuil>
+          <idcible>4</idcible>
+          <ratio>2.25</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        
+      </palliers>
+    </product>
+
+    </product>
+
+    <product>
+      <id>5</id>
+      <name>Joueur Star</name>
+      <logo>joueurstar.png</logo>
+      <cout>103680</cout>
+      <croissance>1.12</croissance>
+      <revenu>1.75</revenu>
+      <vitesse>24000</vitesse>
+      <quantite>0</quantite>
+      <timeleft>24000</timeleft>
+      <managerUnlocked>false</managerUnlocked>
+      
+      <palliers>
+          
+        <pallier>
+          <name>100 Joueurs Star achetés</name>
+          <logo>100jstar.png</logo>
+          <seuil>100</seuil>
+          <idcible>5</idcible>
+          <ratio>1.75</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        
+        <pallier>
+          <name>300 Joueurs Star achetés</name>
+          <logo>300jstar.png</logo>
+          <seuil>300</seuil>
+          <idcible>5</idcible>
+          <ratio>1.95</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        
+        <pallier>
+          <name>700 Joueurs Star achetés</name>
+          <logo>700jstar.png</logo>
+          <seuil>700</seuil>
+          <idcible>5</idcible>
+          <ratio>2.25</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+
+        </product>
+
+    <product>
+      <id>6</id>
+      <name>Joueur de Légende</name>
+      <logo>joueurleg.png</logo>
+      <cout>1244160</cout>
+      <croissance>1.11</croissance>
+      <revenu>1.75</revenu>
+      <vitesse>136000</vitesse>
+      <quantite>0</quantite>
+      <timeleft>136000</timeleft>
+      <managerUnlocked>false</managerUnlocked>
+      
+      <palliers>
+          
+        <pallier>
+          <name>100 Joueurs Légendaire achetés</name>
+          <logo>100jleg.png</logo>
+          <seuil>100</seuil>
+          <idcible>6</idcible>
+          <ratio>1.75</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        
+        <pallier>
+          <name>300 Joueurs Légendaire achetés</name>
+          <logo>300jleg.png</logo>
+          <seuil>300</seuil>
+          <idcible>6</idcible>
+          <ratio>1.95</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        
+        <pallier>
+          <name>700 Joueurs Légendaire achetés</name>
+          <logo>700jleg.png</logo>
+          <seuil>700</seuil>
+          <idcible>6</idcible>
+          <ratio>2.25</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+
+
        
   </products>
   
@@ -124,16 +311,6 @@
   </allunlocks>
   
   <upgrades>
-      
-    <pallier>
-      <name>Tout x2</name>
-      <logo>toutx2.png</logo>
-      <seuil>10 000</seuil>
-      <idcible>0</idcible>
-      <ratio>2</ratio>
-      <typeratio>gain</typeratio>
-      <unlocked>false</unlocked>
-    </pallier>
     
     <pallier>
       <name>Tout x2</name>
@@ -146,7 +323,7 @@
     </pallier>
     
     <pallier>
-      <name>Joueurs Ligue 1 vitesse x2</name>
+      <name>Joueurs amateur vitesse x2</name>
       <logo>p1vitessex2.png</logo>
       <seuil>5000</seuil>
       <idcible>1</idcible>
@@ -156,7 +333,7 @@
     </pallier>
     
     <pallier>
-      <name>Joueurs Liga vitesse x2</name>
+      <name>Joueurs Pro vitesse x2</name>
       <logo>p2vitessex2.png</logo>
       <seuil>7500</seuil>
       <idcible>2</idcible>
@@ -176,7 +353,7 @@
     </pallier>
     
     <pallier>
-      <name>Joueur Ligue 1 vitesse x3</name>
+      <name>Joueur Amateur vitesse x3</name>
       <logo>p1vitessex3.png</logo>
       <seuil>50000</seuil>
       <idcible>1</idcible>
@@ -186,7 +363,7 @@
     </pallier>
     
     <pallier>
-      <name>Joueurs Liga vitesse 3</name>
+      <name>Joueurs Pro vitesse x3</name>
       <logo>p2vitessex3.png</logo>
       <seuil>75000</seuil>
       <idcible>2</idcible>
@@ -244,9 +421,9 @@
   <managers>
       
     <pallier>
-      <name>Wassim Aityoucef</name>
-      <logo>wassimaityoucef.png</logo>
-      <seuil>100</seuil>
+      <name>Lucas Abitbol</name>
+      <logo>lucas.png</logo>
+      <seuil>1000</seuil>
       <idcible>1</idcible>
       <ratio>1.5</ratio>
       <typeratio>vitesse</typeratio>
@@ -254,11 +431,51 @@
     </pallier>
     
     <pallier>
-      <name>Lucas Abitbol</name>
-      <logo>lucasabitbol.png</logo>
-      <seuil>100</seuil>
+      <name>Wassim Aityoucef</name>
+      <logo>wassim.png</logo>
+      <seuil>15000</seuil>
       <idcible>2</idcible>
       <ratio>1.7</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+
+    <pallier>
+      <name>José Mourinho</name>
+      <logo>mourinho.png</logo>
+      <seuil>100000</seuil>
+      <idcible>3</idcible>
+      <ratio>1.8</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+
+    <pallier>
+      <name>Zinedine Zidane</name>
+      <logo>zidane.png</logo>
+      <seuil>500000</seuil>
+      <idcible>4</idcible>
+      <ratio>1.6</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+
+    <pallier>
+      <name>Josep Guardiola</name>
+      <logo>guardiola.png</logo>
+      <seuil>1200000</seuil>
+      <idcible>5</idcible>
+      <ratio>1.5</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+
+    <pallier>
+      <name>Sir Alex Ferguson</name>
+      <logo>ferguson.png</logo>
+      <seuil>10000000</seuil>
+      <idcible>6</idcible>
+      <ratio>1.4</ratio>
       <typeratio>gain</typeratio>
       <unlocked>false</unlocked>
     </pallier>
