@@ -121,7 +121,7 @@ public class Services {
 
     World getWorld(String username) {
         World world = readWorldFromXml(username);
-        //updateWorld(username);
+        updateWorld(world);
         saveWorldToXml(world, username);
         return world;
     }
@@ -148,14 +148,12 @@ public class Services {
             world.setMoney(world.getMoney() + (product.getRevenu() * product.getQuantite()));
         }
 
-        List<PallierType> unlocks = (List<PallierType>) product.getPalliers().getPallier();
-        for (PallierType u : unlocks) {
+        for (PallierType u : product.getPalliers().getPallier()) {
             // si l'unlock n'est pas encore déloqué et que la quantité est supérieure au seuil
-            if (u.isUnlocked() == false && product.getQuantite() >= u.getSeuil()) {
+            if (u.isUnlocked() == false && product.getQuantite() < u.getSeuil() && newproduct.getQuantite()>=u.getSeuil()) {
                 addUnlock(u, product);
             }
         }
-
         // sauvegarder les changements du monde
         saveWorldToXml(world, username);
         return true;
@@ -188,11 +186,10 @@ public class Services {
         return true;
     }
 
-    void updateWorld(String username) {
-        World world = getWorld(username);
+    void updateWorld(World world) {
         long diff = System.currentTimeMillis() - world.getLastupdate();
         int angeBonus = world.getAngelbonus();
-        List<ProductType> produits = (List<ProductType>) world.getProducts();
+        List<ProductType> produits =world.getProducts().getProduct();
         for (ProductType p : produits) {
             // Le produit n'a pas de manager
             if (!p.isManagerUnlocked()) {

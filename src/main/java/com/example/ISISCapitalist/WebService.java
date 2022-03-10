@@ -22,40 +22,59 @@ public class WebService {
         services = new Services();
     }
 
-    @GetMapping(value = "world", produces = {"application/xml","application/json"})
+    @GetMapping(value = "/world", produces = {"application/xml","application/json"})
     public ResponseEntity<World> getWorld(@RequestHeader(value="X-User", required = false) String username) {
         World world = services.getWorld(username);
         return ResponseEntity.ok(world);
     }
 
-    @PutMapping(value = "product", consumes = {"application/xml","application/json"}, produces = {"application/xml","application/json"})
-    public ResponseEntity<World> putProduct(@RequestHeader(value = "X-User", required = true) String username, @RequestBody ProductType newProduct) {
-        services.updateProduct(username, newProduct);
-        return ResponseEntity.ok(services.getWorld(username));
+    @PutMapping(value = "/product", consumes ={"application/xml","application/json"})
+    public ProductType putProduct(@RequestHeader(value = "X-User", required = false) String username,@RequestBody ProductType produit) {
+        Boolean majFaite = services.updateProduct(username,produit);
+        if (majFaite){
+            return produit;
+        }
+        else{
+            return null;
+        }
     }
 
-    @PutMapping(value = "manager", consumes = {"application/xml","application/json"}, produces = {"application/xml","application/json"})
-    public ResponseEntity<World> putManager(@RequestHeader(value = "X-User", required = true) String username, @RequestBody PallierType newManager) {
-        services.updateManager(username, newManager);
-        return ResponseEntity.ok(services.getWorld(username));
+    @PutMapping(value = "/manager", consumes ={"application/xml","application/json"})
+    public PallierType putManager(@RequestHeader(value = "X-User", required = false) String username, @RequestBody PallierType manager) {
+        Boolean majFaite = services.updateManager(username, manager);
+        if (majFaite) {
+            return manager;
+        }
+        else {
+            return null;
+        }
     }
 
-    @PutMapping(value = "upgrade", consumes = {"application/xml","application/json"}, produces = {"application/xml","application/json"})
-    public ResponseEntity<World> putUpgrade(@RequestHeader(value = "X-User", required = true) String username, @RequestBody PallierType newUpgrade) {
-        services.addUpgrade(username, newUpgrade);
-        return ResponseEntity.ok(services.getWorld(username));
+    @PutMapping(value = "/upgrade", consumes = {"application/xml","application/json"})
+    public PallierType putUpgrade(@RequestHeader(value = "X-User", required = false) String username, @RequestBody PallierType newUpgrade) {
+        Boolean majFaite = services.addUpgrade(username, newUpgrade);
+        if (majFaite) {
+            return newUpgrade;
+        }
+        else {
+            return null;
+        }
     }
 
-    @PutMapping(value = "angelUpgrade", consumes = {"application/xml","application/json"}, produces = {"application/xml","application/json"})
-    public ResponseEntity<World> putAngelUpgrade(@RequestHeader(value = "X-User", required = true) String username, @RequestBody PallierType newAngel) {
-        services.addAngelUpgrade(username, newAngel);
-        return ResponseEntity.ok(services.getWorld(username));
+    @PutMapping(value = "/angelUpgrade", consumes = {"application/xml","application/json"})
+    public PallierType putAngelUpgrade(@RequestHeader(value = "X-User", required = false) String username, @RequestBody PallierType newAngel) {
+        boolean majFaite = services.addAngelUpgrade(username, newAngel);
+        if (majFaite) {
+            return newAngel;
+        }
+        else {
+            return null;
+        }
     }
 
-    @DeleteMapping(value = "world", consumes = {"application/xml","application/json"}, produces = {"application/xml","application/json"})
-    public ResponseEntity<World> deleteWorld(@RequestHeader(value = "X-User", required = true) String username) throws JAXBException {
+    @DeleteMapping(value = "/world", consumes = {"application/xml","application/json"})
+    public void deleteWorld(@RequestHeader(value = "X-User", required = true) String username) throws JAXBException {
         services.deleteWorld(username);
-        return ResponseEntity.ok(services.getWorld(username));
     }
 
 }
