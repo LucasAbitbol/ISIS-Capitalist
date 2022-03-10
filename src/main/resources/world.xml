@@ -2,9 +2,9 @@
 
 <world>
     <name>WassxLucas FC</name>
-    <logo>club.png</logo>
-    <money>10000000</money>
-    <score>10000000</score>
+    <logo>icones/logo.png</logo>
+    <money>10000069</money>
+    <score>10006969</score>
     <totalangels>1000000000</totalangels>
     <activeangels>0</activeangels>
     <angelbonus>0.02</angelbonus>
@@ -15,7 +15,7 @@
         <product>
             <id>1</id>
             <name>Joueur Amateur</name>
-            <logo>Amateur.png</logo>
+            <logo>icones/Amateur.png</logo>
             <cout>1</cout>
             <croissance>1.04</croissance>
             <revenu>1.5</revenu>
@@ -28,7 +28,7 @@
 
                 <pallier>
                     <name>50 joueurs amateurs achetés</name>
-                    <logo>50jamateur.png</logo>
+                    <logo>icones/50jamateur.png</logo>
                     <seuil>50</seuil>
                     <idcible>1</idcible>
                     <ratio>1.5</ratio>
@@ -38,7 +38,7 @@
 
                 <pallier>
                     <name>150 Joueurs amateurs achetés</name>
-                    <logo>150jamateur.png</logo>
+                    <logo>icones/150jamateur.png</logo>
                     <seuil>150</seuil>
                     <idcible>1</idcible>
                     <ratio>1.75</ratio>
@@ -48,7 +48,7 @@
 
                 <pallier>
                     <name>300 Joueurs amateurs achetés</name>
-                    <logo>300jamateur.png</logo>
+                    <logo>icones/300jamateur.png</logo>
                     <seuil>300</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -63,7 +63,7 @@
         <product>
             <id>2</id>
             <name>Joueur Professionnel</name>
-            <logo>joueurpro.png</logo>
+            <logo>icones/joueurpro.png</logo>
             <cout>60</cout>
             <croissance>1.15</croissance>
             <revenu>1.75</revenu>
@@ -76,7 +76,7 @@
 
                 <pallier>
                     <name>100 Joueurs Pro achetés</name>
-                    <logo>100jpro.png</logo>
+                    <logo>icones/100jpro.png</logo>
                     <seuil>100</seuil>
                     <idcible>2</idcible>
                     <ratio>1.75</ratio>
@@ -86,7 +86,7 @@
 
                 <pallier>
                     <name>300 Joueurs Pro achetés</name>
-                    <logo>300jpro.png</logo>
+                    <logo>icones/300jpro.png</logo>
                     <seuil>300</seuil>
                     <idcible>2</idcible>
                     <ratio>1.95</ratio>
@@ -96,7 +96,7 @@
 
                 <pallier>
                     <name>700 Joueurs Pro achetés</name>
-                    <logo>700jpro.png</logo>
+                    <logo>icones/700jpro.png</logo>
                     <seuil>700</seuil>
                     <idcible>2</idcible>
                     <ratio>2.25</ratio>
@@ -110,7 +110,7 @@
         <product>
             <id>3</id>
             <name>Joueur Europa League</name>
-            <logo>joueuruel.png</logo>
+            <logo>icones/joueuruel.png</logo>
             <cout>720</cout>
             <croissance>1.14</croissance>
             <revenu>1.75</revenu>
@@ -123,7 +123,7 @@
 
                 <pallier>
                     <name>100 Joueurs Europa achetés</name>
-                    <logo>100juel.png</logo>
+                    <logo>icones/100juel.png</logo>
                     <seuil>100</seuil>
                     <idcible>3</idcible>
                     <ratio>1.75</ratio>
@@ -133,7 +133,7 @@
 
                 <pallier>
                     <name>300 Joueurs Europa achetés</name>
-                    <logo>300juel.png</logo>
+                    <logo>icones/300juel.png</logo>
                     <seuil>300</seuil>
                     <idcible>3</idcible>
                     <ratio>1.95</ratio>
@@ -143,7 +143,7 @@
 
                 <pallier>
                     <name>700 Joueurs Europa achetés</name>
-                    <logo>700juel.png</logo>
+                    <logo>icones/700juel.png</logo>
                     <seuil>700</seuil>
                     <idcible>3</idcible>
                     <ratio>2.25</ratio>
@@ -158,7 +158,7 @@
         <product>
             <id>4</id>
             <name>Joueur Champions League</name>
-            <logo>joueurucl.png</logo>
+            <logo>icones/joueurucl.png</logo>
             <cout>8640</cout>
             <croissance>1.13</croissance>
             <revenu>1.75</revenu>
@@ -171,7 +171,7 @@
 
                 <pallier>
                     <name>100 Joueurs Champions achetés</name>
-                    <logo>100jucl.png</logo>
+                    <logo>icones/100jucl.png</logo>
                     <seuil>100</seuil>
                     <idcible>4</idcible>
                     <ratio>1.75</ratio>
@@ -181,7 +181,7 @@
 
                 <pallier>
                     <name>300 Joueurs Champions achetés</name>
-                    <logo>300jucl.png</logo>
+                    <logo>icones/300jucl.png</logo>
                     <seuil>300</seuil>
                     <idcible>4</idcible>
                     <ratio>1.95</ratio>
@@ -191,7 +191,7 @@
 
                 <pallier>
                     <name>700 Joueurs Champions achetés</name>
-                    <logo>700jucl.png</logo>
+                    <logo>icones/700jucl.png</logo>
                     <seuil>700</seuil>
                     <idcible>4</idcible>
                     <ratio>2.25</ratio>
@@ -205,7 +205,7 @@
         <product>
             <id>5</id>
             <name>Joueur Star</name>
-            <logo>joueurstar.png</logo>
+            <logo>icones/joueurstar.png</logo>
             <cout>103680</cout>
             <croissance>1.12</croissance>
             <revenu>1.75</revenu>
@@ -218,7 +218,7 @@
 
                 <pallier>
                     <name>100 Joueurs Star achetés</name>
-                    <logo>100jstar.png</logo>
+                    <logo>icones/100jstar.png</logo>
                     <seuil>100</seuil>
                     <idcible>5</idcible>
                     <ratio>1.75</ratio>
@@ -228,7 +228,7 @@
 
                 <pallier>
                     <name>300 Joueurs Star achetés</name>
-                    <logo>300jstar.png</logo>
+                    <logo>icones/300jstar.png</logo>
                     <seuil>300</seuil>
                     <idcible>5</idcible>
                     <ratio>1.95</ratio>
@@ -238,7 +238,7 @@
 
                 <pallier>
                     <name>700 Joueurs Star achetés</name>
-                    <logo>700jstar.png</logo>
+                    <logo>icones/700jstar.png</logo>
                     <seuil>700</seuil>
                     <idcible>5</idcible>
                     <ratio>2.25</ratio>
@@ -253,7 +253,7 @@
         <product>
             <id>6</id>
             <name>Joueur de Légende</name>
-            <logo>joueurleg.png</logo>
+            <logo>icones/joueurleg.png</logo>
             <cout>1244160</cout>
             <croissance>1.11</croissance>
             <revenu>1.75</revenu>
@@ -266,7 +266,7 @@
 
                 <pallier>
                     <name>100 Joueurs Légendaire achetés</name>
-                    <logo>100jleg.png</logo>
+                    <logo>icones/100jleg.png</logo>
                     <seuil>100</seuil>
                     <idcible>6</idcible>
                     <ratio>1.75</ratio>
@@ -276,7 +276,7 @@
 
                 <pallier>
                     <name>300 Joueurs Légendaire achetés</name>
-                    <logo>300jleg.png</logo>
+                    <logo>icones/300jleg.png</logo>
                     <seuil>300</seuil>
                     <idcible>6</idcible>
                     <ratio>1.95</ratio>
@@ -286,7 +286,7 @@
 
                 <pallier>
                     <name>700 Joueurs Légendaire achetés</name>
-                    <logo>700jleg.png</logo>
+                    <logo>icones/700jleg.png</logo>
                     <seuil>700</seuil>
                     <idcible>6</idcible>
                     <ratio>2.25</ratio>
@@ -302,7 +302,7 @@
 
         <pallier>
             <name>Tout vitesse x2</name>
-            <logo>toutvitessex2.png</logo>
+            <logo>icones/toutvitessex2.png</logo>
             <seuil>25</seuil>
             <idcible>0</idcible>
             <ratio>2</ratio>
@@ -316,7 +316,7 @@
 
         <pallier>
             <name>Tout x2</name>
-            <logo>toutx2.png</logo>
+            <logo>icones/toutx2.png</logo>
             <seuil>10000</seuil>
             <idcible>0</idcible>
             <ratio>2</ratio>
@@ -326,7 +326,7 @@
 
         <pallier>
             <name>Joueurs amateur vitesse x2</name>
-            <logo>p1vitessex2.png</logo>
+            <logo>icones/p1vitessex2.png</logo>
             <seuil>5000</seuil>
             <idcible>1</idcible>
             <ratio>2</ratio>
@@ -336,7 +336,7 @@
 
         <pallier>
             <name>Joueurs Pro vitesse x2</name>
-            <logo>p2vitessex2.png</logo>
+            <logo>icones/p2vitessex2.png</logo>
             <seuil>7500</seuil>
             <idcible>2</idcible>
             <ratio>2</ratio>
@@ -346,7 +346,7 @@
 
         <pallier>
             <name>Tout x3</name>
-            <logo>toutx3.png</logo>
+            <logo>icones/toutx3.png</logo>
             <seuil>100000</seuil>
             <idcible>0</idcible>
             <ratio>3</ratio>
@@ -356,7 +356,7 @@
 
         <pallier>
             <name>Joueur Amateur vitesse x3</name>
-            <logo>p1vitessex3.png</logo>
+            <logo>icones/p1vitessex3.png</logo>
             <seuil>50000</seuil>
             <idcible>1</idcible>
             <ratio>3</ratio>
@@ -366,7 +366,7 @@
 
         <pallier>
             <name>Joueurs Pro vitesse x3</name>
-            <logo>p2vitessex3.png</logo>
+            <logo>icones/p2vitessex3.png</logo>
             <seuil>75000</seuil>
             <idcible>2</idcible>
             <ratio>3</ratio>
@@ -376,7 +376,7 @@
 
         <pallier>
             <name>Tout x4</name>
-            <logo>toutx4.png</logo>
+            <logo>icones/toutx4.png</logo>
             <seuil>500000</seuil>
             <idcible>0</idcible>
             <ratio>4</ratio>
@@ -390,7 +390,7 @@
 
         <pallier>
             <name>Investisseur +2%</name>
-            <logo>investorplus2.png</logo>
+            <logo>icones/investorplus2.png</logo>
             <seuil>100000</seuil>
             <idcible>-1</idcible>
             <ratio>1.02</ratio>
@@ -400,7 +400,7 @@
 
         <pallier>
             <name>Investisseur +3%</name>
-            <logo>investorplus3.png</logo>
+            <logo>icones/investorplus3.png</logo>
             <seuil>300000</seuil>
             <idcible>-1</idcible>
             <ratio>1.03</ratio>
@@ -410,7 +410,7 @@
 
         <pallier>
             <name>Investisseur +4%</name>
-            <logo>investorplus4.png</logo>
+            <logo>icones/investorplus4.png</logo>
             <seuil>700000</seuil>
             <idcible>-1</idcible>
             <ratio>1.04</ratio>
@@ -424,7 +424,7 @@
 
         <pallier>
             <name>Lucas Abitbol</name>
-            <logo>lucas.png</logo>
+            <logo>icones/lucas.png</logo>
             <seuil>1000</seuil>
             <idcible>1</idcible>
             <ratio>1.5</ratio>
@@ -434,7 +434,7 @@
 
         <pallier>
             <name>Wassim Aityoucef</name>
-            <logo>wassim.png</logo>
+            <logo>icones/wassim.png</logo>
             <seuil>15000</seuil>
             <idcible>2</idcible>
             <ratio>1.7</ratio>
@@ -444,7 +444,7 @@
 
         <pallier>
             <name>José Mourinho</name>
-            <logo>mourinho.png</logo>
+            <logo>icones/mourinho.png</logo>
             <seuil>100000</seuil>
             <idcible>3</idcible>
             <ratio>1.8</ratio>
@@ -454,7 +454,7 @@
 
         <pallier>
             <name>Zinedine Zidane</name>
-            <logo>zidane.png</logo>
+            <logo>icones/zidane.png</logo>
             <seuil>500000</seuil>
             <idcible>4</idcible>
             <ratio>1.6</ratio>
@@ -464,7 +464,7 @@
 
         <pallier>
             <name>Josep Guardiola</name>
-            <logo>guardiola.png</logo>
+            <logo>icones/guardiola.png</logo>
             <seuil>1200000</seuil>
             <idcible>5</idcible>
             <ratio>1.5</ratio>
@@ -474,7 +474,7 @@
 
         <pallier>
             <name>Sir Alex Ferguson</name>
-            <logo>ferguson.png</logo>
+            <logo>icones/ferguson.png</logo>
             <seuil>10000000</seuil>
             <idcible>6</idcible>
             <ratio>1.4</ratio>

@@ -22,7 +22,7 @@ public class Services {
 
     /*
     Ici on retrouve toutes les fonctions permettant de retrouver les managers, les produits, les anges ou les prix en fonction de certains paramètres
-    Pour avoir un code plus lisbile dans les fonctions servant à l'API REST appelées dans WebService
+    Pour avoir un code plus lisible dans les fonctions servant à l'API REST appelées dans WebService
     */
     public ProductType findProductById(World world, int id) {
         for (ProductType p : world.getProducts().getProduct()) {
