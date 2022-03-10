@@ -22,53 +22,40 @@ public class WebService {
         services = new Services();
     }
 
-    @GET
-    @Path("world")
-    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public Response getWorld(@Context HttpServletRequest request) throws JAXBException {
-        String username = request.getHeader("X-user");
-        return Response.ok(services.getWorld(username)).build();
-}
-
-    @PUT
-    @Path("world")
-    public void putWorld(@Context HttpServletRequest request, World world) throws JAXBException {
-        String username = request.getHeader("X-user");
-        services.saveWorldToXml(world, username);
+    @GetMapping(value = "world", produces = {"application/xml","application/json"})
+    public ResponseEntity<World> getWorld(@RequestHeader(value="X-User", required = false) String username) {
+        World world = services.getWorld(username);
+        return ResponseEntity.ok(world);
     }
 
-    @PUT
-    @Path("product")
-    public void putProduct(@Context HttpServletRequest request, ProductType product) throws JAXBException {
-        String username = request.getHeader("X-user");
-        services.updateProduct(username, product);
+    @PutMapping(value = "product", consumes = {"application/xml","application/json"}, produces = {"application/xml","application/json"})
+    public ResponseEntity<World> putProduct(@RequestHeader(value = "X-User", required = true) String username, @RequestBody ProductType newProduct) {
+        services.updateProduct(username, newProduct);
+        return ResponseEntity.ok(services.getWorld(username));
     }
 
-    @PUT
-    @Path("manager")
-    public void putManager(@Context HttpServletRequest request, PallierType manager) throws JAXBException {
-        String username = request.getHeader("X-user");
-        services.updateManager(username, manager);
+    @PutMapping(value = "manager", consumes = {"application/xml","application/json"}, produces = {"application/xml","application/json"})
+    public ResponseEntity<World> putManager(@RequestHeader(value = "X-User", required = true) String username, @RequestBody PallierType newManager) {
+        services.updateManager(username, newManager);
+        return ResponseEntity.ok(services.getWorld(username));
     }
 
-    @PUT
-    @Path("upgrade")
-    public void putUpgrade(@Context HttpServletRequest request, PallierType upgrade) throws JAXBException {
-        String username = request.getHeader("X-user");
-        services.addUpgrade(username, upgrade);
+    @PutMapping(value = "upgrade", consumes = {"application/xml","application/json"}, produces = {"application/xml","application/json"})
+    public ResponseEntity<World> putUpgrade(@RequestHeader(value = "X-User", required = true) String username, @RequestBody PallierType newUpgrade) {
+        services.addUpgrade(username, newUpgrade);
+        return ResponseEntity.ok(services.getWorld(username));
     }
 
-    @PUT
-    @Path("angel")
-    public void putAngel(@Context HttpServletRequest request, PallierType angel) throws JAXBException {
-        String username = request.getHeader("X-user");
-        services.addAngelUpgrade(username, angel);
+    @PutMapping(value = "angelUpgrade", consumes = {"application/xml","application/json"}, produces = {"application/xml","application/json"})
+    public ResponseEntity<World> putAngelUpgrade(@RequestHeader(value = "X-User", required = true) String username, @RequestBody PallierType newAngel) {
+        services.addAngelUpgrade(username, newAngel);
+        return ResponseEntity.ok(services.getWorld(username));
     }
 
-    @DELETE
-    @Path("world")
-    public void deleteWorld(@Context HttpServletRequest request) throws JAXBException {
-        String username = request.getHeader("X-user");
+    @DeleteMapping(value = "world", consumes = {"application/xml","application/json"}, produces = {"application/xml","application/json"})
+    public ResponseEntity<World> deleteWorld(@RequestHeader(value = "X-User", required = true) String username) throws JAXBException {
         services.deleteWorld(username);
+        return ResponseEntity.ok(services.getWorld(username));
     }
+
 }

@@ -65,7 +65,7 @@ public class Services {
         return null;
     }
 
-    // permet d'ajouter un upgrade au produit
+    // permet d'ajouter un upgrade au produit en fonction de son type
     public void addUnlock(PallierType pallier, ProductType product) {
         pallier.setUnlocked(true);
         if (pallier.getTyperatio() == TyperatioType.VITESSE) {
@@ -97,7 +97,6 @@ public class Services {
             } catch (Exception ex) {
                 jaxbContext = JAXBContext.newInstance(World.class);
                 Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-                // File f = new File(path+"/world.xml");
                 world = (World) jaxbUnmarshaller.unmarshal(input);
                 return world;
             }
@@ -122,7 +121,7 @@ public class Services {
 
     World getWorld(String username) {
         World world = readWorldFromXml(username);
-        updateWorld(username);
+        //updateWorld(username);
         saveWorldToXml(world, username);
         return world;
     }
@@ -210,7 +209,7 @@ public class Services {
                 }
             } else {
                 long vitesse = p.getVitesse();
-                long nbProd = (int) diff / vitesse;
+                long nbProd = diff/vitesse;
                 // On met à jour le score et l'argent du monde en fonction du nombre de produit créé
                 double newScore = world.getScore() + (p.getRevenu() * nbProd * (1 + world.getActiveangels() * angeBonus / 100));
                 world.setScore(newScore);
