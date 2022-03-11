@@ -474,7 +474,7 @@
 
         <pallier>
             <name>Sir Alex Ferguson</name>
-            <logo>icones/ferguson.jpg</logo>
+            <logo>icones/ferguson.jpeg</logo>
             <seuil>10000000</seuil>
             <idcible>6</idcible>
             <ratio>1.4</ratio>
