@@ -1,1 +1,229 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><world><name>Monde de Toto</name><logo>club.png</logo><money>1.000000875E7</money><score>1.000000975E7</score><totalangels>1.0E9</totalangels><activeangels>0.0</activeangels><angelbonus>0</angelbonus><lastupdate>1646928894161</lastupdate><products><product><id>1</id><name>Joueur ligue 1</name><logo>ligue1.png</logo><cout>1.04</cout><croissance>1.04</croissance><revenu>1.5</revenu><vitesse>1000</vitesse><quantite>1</quantite><timeleft>1000</timeleft><managerUnlocked>false</managerUnlocked><palliers><pallier><name>50 joueurs de L1 achetés</name><logo>50jl1.png</logo><seuil>50</seuil><idcible>1</idcible><ratio>1.5</ratio><typeratio>vitesse</typeratio><unlocked>false</unlocked></pallier><pallier><name>150 Joueurs de L1 achetés</name><logo>150jl1.png</logo><seuil>150</seuil><idcible>1</idcible><ratio>1.75</ratio><typeratio>vitesse</typeratio><unlocked>false</unlocked></pallier><pallier><name>300 Joueurs de L1 achetés</name><logo>300jl1.png</logo><seuil>300</seuil><idcible>1</idcible><ratio>2.0</ratio><typeratio>gain</typeratio><unlocked>false</unlocked></pallier></palliers></product><product><id>2</id><name>Joueur Liga</name><logo>joueurliga.png</logo><cout>2.0</cout><croissance>1.06</croissance><revenu>1.75</revenu><vitesse>2000</vitesse><quantite>0</quantite><timeleft>2000</timeleft><managerUnlocked>false</managerUnlocked><palliers><pallier><name>100 Joueurs Liga achetés</name><logo>100jliga.png</logo><seuil>100</seuil><idcible>2</idcible><ratio>1.75</ratio><typeratio>gain</typeratio><unlocked>false</unlocked></pallier><pallier><name>300 Joueurs Liga achetés</name><logo>300jliga.png</logo><seuil>300</seuil><idcible>2</idcible><ratio>1.95</ratio><typeratio>vitesse</typeratio><unlocked>false</unlocked></pallier><pallier><name>700 Joueurs Liga achetés</name><logo>700jliga.png</logo><seuil>700</seuil><idcible>2</idcible><ratio>2.25</ratio><typeratio>gain</typeratio><unlocked>false</unlocked></pallier></palliers></product></products><allunlocks><pallier><name>Tout vitesse x2</name><logo>toutvitessex2.png</logo><seuil>25</seuil><idcible>0</idcible><ratio>2.0</ratio><typeratio>vitesse</typeratio><unlocked>false</unlocked></pallier></allunlocks><upgrades><pallier><name>Tout x2</name><logo>toutx2.png</logo><seuil>10000</seuil><idcible>0</idcible><ratio>2.0</ratio><typeratio>gain</typeratio><unlocked>false</unlocked></pallier><pallier><name>Tout x2</name><logo>toutx2.png</logo><seuil>10000</seuil><idcible>0</idcible><ratio>2.0</ratio><typeratio>gain</typeratio><unlocked>false</unlocked></pallier><pallier><name>Joueurs Ligue 1 vitesse x2</name><logo>p1vitessex2.png</logo><seuil>5000</seuil><idcible>1</idcible><ratio>2.0</ratio><typeratio>vitesse</typeratio><unlocked>false</unlocked></pallier><pallier><name>Joueurs Liga vitesse x2</name><logo>p2vitessex2.png</logo><seuil>7500</seuil><idcible>2</idcible><ratio>2.0</ratio><typeratio>vitesse</typeratio><unlocked>false</unlocked></pallier><pallier><name>Tout x3</name><logo>toutx3.png</logo><seuil>100000</seuil><idcible>0</idcible><ratio>3.0</ratio><typeratio>gain</typeratio><unlocked>false</unlocked></pallier><pallier><name>Joueur Ligue 1 vitesse x3</name><logo>p1vitessex3.png</logo><seuil>50000</seuil><idcible>1</idcible><ratio>3.0</ratio><typeratio>vitesse</typeratio><unlocked>false</unlocked></pallier><pallier><name>Joueurs Liga vitesse 3</name><logo>p2vitessex3.png</logo><seuil>75000</seuil><idcible>2</idcible><ratio>3.0</ratio><typeratio>vitesse</typeratio><unlocked>false</unlocked></pallier><pallier><name>Tout x4</name><logo>toutx4.png</logo><seuil>500000</seuil><idcible>0</idcible><ratio>4.0</ratio><typeratio>gain</typeratio><unlocked>false</unlocked></pallier></upgrades><angelupgrades><pallier><name>Investisseur +2%</name><logo>investorplus2.png</logo><seuil>100000</seuil><idcible>-1</idcible><ratio>1.02</ratio><typeratio>ange</typeratio><unlocked>true</unlocked></pallier><pallier><name>Investisseur +3%</name><logo>investorplus3.png</logo><seuil>300000</seuil><idcible>-1</idcible><ratio>1.03</ratio><typeratio>ange</typeratio><unlocked>false</unlocked></pallier><pallier><name>Investisseur +4%</name><logo>investorplus4.png</logo><seuil>700000</seuil><idcible>-1</idcible><ratio>1.04</ratio><typeratio>ange</typeratio><unlocked>false</unlocked></pallier></angelupgrades><managers><pallier><name>Wassim Aityoucef</name><logo>wassimaityoucef.png</logo><seuil>100</seuil><idcible>1</idcible><ratio>1.5</ratio><typeratio>vitesse</typeratio><unlocked>false</unlocked></pallier><pallier><name>Lucas Abitbol</name><logo>lucasabitbol.png</logo><seuil>100</seuil><idcible>2</idcible><ratio>1.7</ratio><typeratio>gain</typeratio><unlocked>false</unlocked></pallier></managers></world>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<world>
+    <name>Monde de Toto</name>
+    <logo>club.png</logo>
+    <money>1.00000228784E7</money>
+    <score>1.0000026E7</score>
+    <totalangels>1.0E9</totalangels>
+    <activeangels>0.0</activeangels>
+    <angelbonus>0</angelbonus>
+    <lastupdate>1646945962731</lastupdate>
+    <products>
+        <product>
+            <id>1</id>
+            <name>Joueur ligue 1</name>
+            <logo>ligue1.png</logo>
+            <cout>1.124864</cout>
+            <croissance>1.04</croissance>
+            <revenu>1.5</revenu>
+            <vitesse>1000</vitesse>
+            <quantite>3</quantite>
+            <timeleft>1000</timeleft>
+            <managerUnlocked>false</managerUnlocked>
+            <palliers>
+                <pallier>
+                    <name>50 joueurs de L1 achetés</name>
+                    <logo>50jl1.png</logo>
+                    <seuil>50</seuil>
+                    <idcible>1</idcible>
+                    <ratio>1.5</ratio>
+                    <typeratio>vitesse</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>150 Joueurs de L1 achetés</name>
+                    <logo>150jl1.png</logo>
+                    <seuil>150</seuil>
+                    <idcible>1</idcible>
+                    <ratio>1.75</ratio>
+                    <typeratio>vitesse</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>300 Joueurs de L1 achetés</name>
+                    <logo>300jl1.png</logo>
+                    <seuil>300</seuil>
+                    <idcible>1</idcible>
+                    <ratio>2.0</ratio>
+                    <typeratio>gain</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+            </palliers>
+        </product>
+        <product>
+            <id>2</id>
+            <name>Joueur Liga</name>
+            <logo>joueurliga.png</logo>
+            <cout>2.0</cout>
+            <croissance>1.06</croissance>
+            <revenu>1.75</revenu>
+            <vitesse>2000</vitesse>
+            <quantite>0</quantite>
+            <timeleft>2000</timeleft>
+            <managerUnlocked>false</managerUnlocked>
+            <palliers>
+                <pallier>
+                    <name>100 Joueurs Liga achetés</name>
+                    <logo>100jliga.png</logo>
+                    <seuil>100</seuil>
+                    <idcible>2</idcible>
+                    <ratio>1.75</ratio>
+                    <typeratio>gain</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>300 Joueurs Liga achetés</name>
+                    <logo>300jliga.png</logo>
+                    <seuil>300</seuil>
+                    <idcible>2</idcible>
+                    <ratio>1.95</ratio>
+                    <typeratio>vitesse</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>700 Joueurs Liga achetés</name>
+                    <logo>700jliga.png</logo>
+                    <seuil>700</seuil>
+                    <idcible>2</idcible>
+                    <ratio>2.25</ratio>
+                    <typeratio>gain</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+            </palliers>
+        </product>
+    </products>
+    <allunlocks>
+        <pallier>
+            <name>Tout vitesse x2</name>
+            <logo>toutvitessex2.png</logo>
+            <seuil>25</seuil>
+            <idcible>0</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+    </allunlocks>
+    <upgrades>
+        <pallier>
+            <name>Tout x2</name>
+            <logo>toutx2.png</logo>
+            <seuil>10000</seuil>
+            <idcible>0</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Tout x2</name>
+            <logo>toutx2.png</logo>
+            <seuil>10000</seuil>
+            <idcible>0</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Joueurs Ligue 1 vitesse x2</name>
+            <logo>p1vitessex2.png</logo>
+            <seuil>5000</seuil>
+            <idcible>1</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Joueurs Liga vitesse x2</name>
+            <logo>p2vitessex2.png</logo>
+            <seuil>7500</seuil>
+            <idcible>2</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Tout x3</name>
+            <logo>toutx3.png</logo>
+            <seuil>100000</seuil>
+            <idcible>0</idcible>
+            <ratio>3.0</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Joueur Ligue 1 vitesse x3</name>
+            <logo>p1vitessex3.png</logo>
+            <seuil>50000</seuil>
+            <idcible>1</idcible>
+            <ratio>3.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Joueurs Liga vitesse 3</name>
+            <logo>p2vitessex3.png</logo>
+            <seuil>75000</seuil>
+            <idcible>2</idcible>
+            <ratio>3.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Tout x4</name>
+            <logo>toutx4.png</logo>
+            <seuil>500000</seuil>
+            <idcible>0</idcible>
+            <ratio>4.0</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+    </upgrades>
+    <angelupgrades>
+        <pallier>
+            <name>Investisseur +2%</name>
+            <logo>investorplus2.png</logo>
+            <seuil>100000</seuil>
+            <idcible>-1</idcible>
+            <ratio>1.02</ratio>
+            <typeratio>ange</typeratio>
+            <unlocked>true</unlocked>
+        </pallier>
+        <pallier>
+            <name>Investisseur +3%</name>
+            <logo>investorplus3.png</logo>
+            <seuil>300000</seuil>
+            <idcible>-1</idcible>
+            <ratio>1.03</ratio>
+            <typeratio>ange</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Investisseur +4%</name>
+            <logo>investorplus4.png</logo>
+            <seuil>700000</seuil>
+            <idcible>-1</idcible>
+            <ratio>1.04</ratio>
+            <typeratio>ange</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+    </angelupgrades>
+    <managers>
+        <pallier>
+            <name>Wassim Aityoucef</name>
+            <logo>wassimaityoucef.png</logo>
+            <seuil>100</seuil>
+            <idcible>1</idcible>
+            <ratio>1.5</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Lucas Abitbol</name>
+            <logo>lucasabitbol.png</logo>
+            <seuil>100</seuil>
+            <idcible>2</idcible>
+            <ratio>1.7</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+    </managers>
+</world>
