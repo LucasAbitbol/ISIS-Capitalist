@@ -83,7 +83,7 @@ public class Services {
                 return world;
             }
         }catch (Exception ex){
-            System.out.println("Erreur lecture du fichier:"+ex.getMessage());
+            System.out.println("Erreur lecture du fichier : "+ex.getMessage());
             ex.printStackTrace();
         }
 
@@ -120,19 +120,19 @@ public class Services {
         int qteChange = newproduct.getQuantite() - product.getQuantite();
         if (qteChange > 0) {
         // soustraire de l'argent du joueur le cout de la quantité achetée et mettre à jour la quantité de product
-            world.setMoney(world.getMoney()-(costOfProduct(product, qteChange)));
+            world.setMoney(world.getMoney()-costOfProduct(product, qteChange));
             product.setCout(product.getCout()*Math.pow(product.getCroissance(),qteChange));
             product.setQuantite(newproduct.getQuantite());
         }
         else {
         // initialiser product.timeleft à product.vitesse pour lancer la production
             product.setTimeleft(product.getVitesse());
-            world.setMoney(world.getMoney() + (product.getRevenu() * product.getQuantite()));
+            world.setMoney(world.getMoney() + product.getRevenu() * product.getQuantite());
         }
 
         for (PallierType u : product.getPalliers().getPallier()) {
             // si l'unlock n'est pas encore déloqué et que la quantité est supérieure au seuil
-            if (u.isUnlocked() == false && product.getQuantite() < u.getSeuil() && newproduct.getQuantite()>=u.getSeuil()) {
+            if (!u.isUnlocked() && product.getQuantite() < u.getSeuil() && newproduct.getQuantite()>=u.getSeuil()) {
                 addUnlock(u, product);
             }
         }
@@ -147,8 +147,7 @@ public class Services {
         System.out.println("Début de l'ajout du manager");
         // aller chercher le monde qui correspond au joueur
         World world = getWorld(username);
-        // trouver dans ce monde, le manager équivalent à celui passé
-        // en paramètre
+        // trouver dans ce monde, le manager équivalent à celui passé en paramètre
         for (PallierType manager : world.getManagers().getPallier()) {
             System.out.println("Manager : " + manager.getName());
             if (manager.getName().equals(newmanager.getName())) {
@@ -165,12 +164,12 @@ public class Services {
                 // sauvegarder les changements au monde
                 product.setManagerUnlocked(true);
                 world.setMoney(world.getMoney() - manager.getSeuil());
-                saveWorldToXml(world, username);
             }
             else {
                 System.out.println("Manager non correspondant");
             }
         }
+        saveWorldToXml(world, username);
         return true;
     }
 
@@ -181,13 +180,12 @@ public class Services {
         for (ProductType p : produits) {
             // Le produit n'a pas de manager
             if (!p.isManagerUnlocked()) {
-                // Le produit a été créé
                 if (p.getTimeleft() != 0 && p.getTimeleft() < diff) {
                     double newScore = world.getScore() + p.getRevenu() * (1 + world.getActiveangels() * angeBonus / 100);
                     world.setScore(newScore);
                     double newMoney = world.getMoney() + p.getRevenu() * (1 + world.getActiveangels() * angeBonus / 100);
                     world.setMoney(newMoney);
-                } // Le produit n'a pas été créé
+                }
                 else {
                     long newTimeLeft = p.getTimeleft() - diff;
                     p.setTimeleft(newTimeLeft);
@@ -216,8 +214,9 @@ public class Services {
         for (PallierType p : world.getUpgrades().getPallier()) {
             System.out.println("Upgrade : " + p.getName());
             if (newUpgrade.getName().equals(p.getName())) {
-                System.out.println("Upgrade correspondant");
+                System.out.println("Correspondant");
                 p.setUnlocked(true);
+                System.out.println("L'upgrade est unlocké");
                 // trouver le produit correspondant a l'upgrade
                 ProductType product = findProductById(world, p.getIdcible());
                 if (product == null) {
@@ -232,14 +231,13 @@ public class Services {
 
                 // modifier le produit en fonction de l'upgrade
                 addUnlock(p, product);
-
-                // sauvegarder les changements au monde
-                saveWorldToXml(world, username);
             }
             else {
-                System.out.println("Upgrade non correspondant");
+                System.out.println("Non correspondant");
             }
         }
+        // sauvegarder les changements au monde
+        saveWorldToXml(world, username);
         return true;
     }
 
@@ -256,7 +254,7 @@ public class Services {
         double newtotalangel = totalAngels - angels;
         if(ange.getTyperatio() == TyperatioType.ANGE) {
             int angeBonus = world.getAngelbonus();
-            angeBonus += angeBonus + ange.getRatio();
+            angeBonus += ange.getRatio();
             world.setAngelbonus(angeBonus);
         }
         else{
