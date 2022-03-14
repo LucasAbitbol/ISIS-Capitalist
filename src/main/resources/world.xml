@@ -209,7 +209,7 @@
             <revenu>1.75</revenu>
             <vitesse>24000</vitesse>
             <quantite>0</quantite>
-            <timeleft>24000</timeleft>
+            <timeleft>145000</timeleft>
             <managerUnlocked>false</managerUnlocked>
 
             <palliers>
@@ -254,7 +254,7 @@
             <logo>icones/joueurleg.png</logo>
             <cout>1244160</cout>
             <croissance>1.11</croissance>
-            <revenu>1.75</revenu>
+            <revenu>345000</revenu>
             <vitesse>136000</vitesse>
             <quantite>0</quantite>
             <timeleft>136000</timeleft>
@@ -423,7 +423,7 @@
         <pallier>
             <name>Lucas Abitbol</name>
             <logo>icones/lucas.jpg</logo>
-            <seuil>1000</seuil>
+            <seuil>10000</seuil>
             <idcible>1</idcible>
             <ratio>1.5</ratio>
             <typeratio>vitesse</typeratio>

@@ -173,18 +173,18 @@ public class Services {
     }
 
     void updateWorld(World world) {
-        System.out.println("DEBUT DE L UPDATE");
+        System.out.println("DEBUT DE L'UPDATE");
         long diffTime = System.currentTimeMillis() - world.getLastupdate();
         int angeBonus = world.getAngelbonus();
         double moneyToAdd = 0;
         List<ProductType> produits = world.getProducts().getProduct();
         for (ProductType p : produits) {
-            System.out.println("Produit : " + p.getName());
+            //System.out.println("Produit : " + p.getName());
             long vitesse = p.getVitesse();
             long nbProd = diffTime / vitesse;
             if (!p.isManagerUnlocked()) {
                 // Le produit n'a pas de manager
-                System.out.println("Manager non débloqué");
+                //System.out.println("Manager non débloqué");
                 if (p.getTimeleft() != 0 && p.getTimeleft() <= diffTime) {
                     // le produit a été crée
                     double anges = 1 + world.getActiveangels() * angeBonus / 100;
@@ -196,7 +196,7 @@ public class Services {
                     p.setTimeleft(newTimeLeft);
                 }
             } else {
-                System.out.println("Manager débloqué");
+                //System.out.println("Manager débloqué");
                 // le produit a un manager
                 if (diffTime/p.getVitesse() > 0) {
                     // des produits ont été créés
