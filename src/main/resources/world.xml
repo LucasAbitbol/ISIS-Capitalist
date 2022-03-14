@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <world>
-    <name>WassxLucas FC</name>
+    <name>Capitalist FC</name>
     <logo>icones/logo.png</logo>
-    <money>10000069</money>
-    <score>10006969</score>
-    <totalangels>1000000000</totalangels>
+    <money>800</money>
+    <score>800</score>
+    <totalangels>0</totalangels>
     <activeangels>0</activeangels>
-    <angelbonus>0.02</angelbonus>
-    <lastupdate>12345</lastupdate>
+    <angelbonus>0</angelbonus>
+    <lastupdate>0</lastupdate>
 
     <products>
 
@@ -16,12 +16,12 @@
             <id>1</id>
             <name>Joueur Amateur</name>
             <logo>icones/Amateur.png</logo>
-            <cout>1</cout>
-            <croissance>1.04</croissance>
-            <revenu>1.5</revenu>
-            <vitesse>500</vitesse>
+            <cout>400</cout>
+            <croissance>1.06</croissance>
+            <revenu>1.0</revenu>
+            <vitesse>350</vitesse>
             <quantite>0</quantite>
-            <timeleft>500</timeleft>
+            <timeleft>2</timeleft>
             <managerUnlocked>false</managerUnlocked>
 
             <palliers>
@@ -64,16 +64,14 @@
             <id>2</id>
             <name>Joueur Professionnel</name>
             <logo>icones/joueurpro.png</logo>
-            <cout>60</cout>
+            <cout>6000</cout>
             <croissance>1.15</croissance>
-            <revenu>1.75</revenu>
-            <vitesse>3000</vitesse>
+            <revenu>80</revenu>
+            <vitesse>2500</vitesse>
             <quantite>0</quantite>
-            <timeleft>3000</timeleft>
+            <timeleft>2500</timeleft>
             <managerUnlocked>false</managerUnlocked>
-
             <palliers>
-
                 <pallier>
                     <name>100 Joueurs Pro achetés</name>
                     <logo>icones/joueurpro.png</logo>
@@ -111,9 +109,9 @@
             <id>3</id>
             <name>Joueur Europa League</name>
             <logo>icones/joueuruel.png</logo>
-            <cout>720</cout>
+            <cout>20000</cout>
             <croissance>1.14</croissance>
-            <revenu>1.75</revenu>
+            <revenu>400</revenu>
             <vitesse>6000</vitesse>
             <quantite>0</quantite>
             <timeleft>6000</timeleft>
@@ -159,9 +157,9 @@
             <id>4</id>
             <name>Joueur Champions League</name>
             <logo>icones/joueurucl.png</logo>
-            <cout>8640</cout>
+            <cout>50000</cout>
             <croissance>1.13</croissance>
-            <revenu>1.75</revenu>
+            <revenu>950</revenu>
             <vitesse>12000</vitesse>
             <quantite>0</quantite>
             <timeleft>12000</timeleft>
@@ -206,7 +204,7 @@
             <id>5</id>
             <name>Joueur Star</name>
             <logo>icones/joueurstar.png</logo>
-            <cout>103680</cout>
+            <cout>145000</cout>
             <croissance>1.12</croissance>
             <revenu>1.75</revenu>
             <vitesse>24000</vitesse>
